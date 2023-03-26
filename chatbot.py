@@ -19,9 +19,9 @@ print("Sa võid nüüd vestelda.")
 with open(filename, "w") as file:
     while True:
         try:
-            message = input(" ")
+            message = input("")
         except UnicodeDecodeError:
-            message = input(" ", encoding="latin1")
+            message = input("", encoding="UTF-8")
         messages.append({"role":"user","content": message})
         file.write("User: " + message + "\n")
 
