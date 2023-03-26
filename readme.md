@@ -6,7 +6,7 @@ Kasutab siis gpt-3.5-turbo mudelit.
 
 Kasutamine terminalis:
 $python3 chatbot.py
-
+//Võimaikud vead võivad veel olla utf-8 kodeeringus. õüäö kasutamine on häiritud//
 Kui tööle ei lähe, siis on puudu -
 import openai jaoks peab eelnevalt paigaldama: 
 pip install openai
