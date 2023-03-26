@@ -16,9 +16,12 @@ else:
 filename = f"vestlus-{new_num}.txt"
 
 print("Sa võid nüüd vestelda.")
-with open(filename, "w", encoding="utf-8") as file:
+with open(filename, "w") as file:
     while True:
-        message = input("")
+        try:
+            message = input(" ")
+        except UnicodeDecodeError:
+            message = input(" ", encoding="latin1")
         messages.append({"role":"user","content": message})
         file.write("User: " + message + "\n")
 
