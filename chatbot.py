@@ -24,7 +24,7 @@ with open(filename, "w") as file:
         try:
             message = input("")
         except UnicodeDecodeError:
-            message = input("", encoding="UTF-8")
+            message = input("")
         messages.append({"role":"user","content": message})
         file.write("User: " + message + "\n")
 
